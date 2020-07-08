@@ -278,6 +278,7 @@ build_script:
       ) else (
       if %BUILD_SYSTEM%==autotools (
         bash.exe -e -l -c "cd /c/projects/curl && ./buildconf && ./configure %CONFIG_ARGS% && make && make examples && cd tests && make"
+        bash.exe -e -l -c "cd /c/projects/curl && ls -alh **/curl.exe && ls -alh **/libcurl*.dll"
       )))))
 
 test_script:
